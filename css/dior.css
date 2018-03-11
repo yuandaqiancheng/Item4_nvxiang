@@ -1,0 +1,153 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/63eba9dd987d42428edfbdbb049a5ddc.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	/*设置背景图片与body的大小自适应*/
+}
+
+
+/*设置video标签属性*/
+
+video {
+	left: 100px;
+	top: 100px;
+}
+
+
+/*设置video块的属性*/
+
+.video {
+	float: left;
+}
+
+
+/*设置diorPicture块的属性*/
+
+.diorPicture {
+	position: relative;
+	width: 858px;
+	height: 926px;
+	left: 600px;
+	top: 50px;
+	overflow: hidden;
+	/*如果内容超出了这个块，则隐藏*/
+	opacity: 0.7;
+}
+
+
+/*设置diorPicture块中img图片的属性*/
+
+.diorPicture img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*.datalist用于制作遮罩层。*/
+
+.diorPicture .details {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	text-align: center;
+	padding: 30% 20px;
+	background: gray;
+	opacity: 0.8;
+	transform: rotate(-90deg);
+	/*逆时针旋转90度*/
+	transform-origin: left top 0;
+	/*设置图片的位置*/
+	transition: all 0.3s ease 0s;
+	/*为所有的动画属性设置0.5秒ease效果的过渡动画*/
+}
+
+
+/*第一个标题的属性设置*/
+
+.diorPicture .title1 {
+	display: inline-block;
+	/*将对象的内容作为块呈递*/
+	font-size: 50px;
+	color: white;
+	margin: 0 0 0 0;
+	position: relative;
+	transform: rotate(180deg);
+	transform-origin: right top 0;
+	transition: all 1s ease-in-out 0.2s;
+}
+
+
+/*第二个标题的属性设置*/
+
+.diorPicture .title2 {
+	display: block;
+	font-size: 50px;
+	color: white;
+	margin-bottom: 40px;
+	transform: rotate(180deg);
+	transform-origin: right top 0;
+	transition: all 1s ease-in-out 0.6s;
+}
+
+.diorPicture .discription1 {
+	font-weight: blod;
+	display: block;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 15px;
+	transform: rotate(180deg);
+	transform-origin: right top 0;
+	transition: all 1s ease-in-out 0.8s;
+}
+
+.diorPicture .discription2 {
+	font-weight: blod;
+	display: block;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 15px;
+	transform: rotate(180deg);
+	transform-origin: right top 0;
+	transition: all 1s ease-in-out 1s;
+}
+
+.diorPicture .discription3 {
+	font-weight: blod;
+	display: block;
+	font-size: 30px;
+	color: white;
+	margin-bottom: 15px;
+	transform: rotate(180deg);
+	transform-origin: right top 0;
+	transition: all 1s ease-in-out 1.2s;
+}
+
+
+/*设置鼠标滑过图片时，将上面所有的元素旋转角度变为0度，
+ * 由于各个元素上都设置了过渡延迟时间，所以各个元素会逐一的旋转到0度的位置*/
+
+.diorPicture:hover .title1,
+.diorPicture:hover .title2,
+.diorPicture:hover .details,
+.diorPicture:hover .discription1,
+.diorPicture:hover .discription2,
+.diorPicture:hover .discription3 {
+	transform: rotate(0deg);
+}
+
+.next{
+	width: 63px;
+	height: 99px;
+	margin-left: 95%;
+}
+
+.next img{
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}

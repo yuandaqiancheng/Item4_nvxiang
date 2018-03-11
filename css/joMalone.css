@@ -1,0 +1,250 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+body{
+	margin: 0;
+	padding:0;
+	background: url(../img/joMalone/背景2-.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+.wrap_2{
+	margin:2% 4% 2% 4%;  
+    padding: 10px 10px;  
+    height: 100%;
+    
+    
+}
+
+
+
+
+.gallery {
+    margin: 0 auto;  
+    height: 200px; 
+    width:1900px;
+    max-height: 1900px;
+    text-align:center; 
+    transform: rotateY(-20deg);
+    animation: anim 10s linear infinite;
+  
+  
+}
+
+.gallery  div {
+  position: relative;
+  float: left;
+  margin:0 10px;
+  padding: 0;
+}
+.gallery div:first-child{
+	margin-right:10px;
+	margin-left: 0;
+}
+.gallery div:last-child{
+	margin-left:10px;
+	margin-right: 0;
+}
+
+.gallery div img {
+  width: 300px;
+  height:200px;
+  -webkit-transition: 0.1s transform;
+  -moz-transition: 0.1s transform;
+  -ms-transition: 0.1s transform;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transition: 0.1s transform;
+  transform: translateZ(0);
+  opacity:0.9;
+  
+}
+
+
+.gallery div:hover {
+  z-index: 999;
+}
+
+.gallery div:hover img {
+  transform: scale(1.5, 2);
+  transition: 0.3s transform;
+  transform-origin:50% 1%;
+}
+
+
+.spic a img{
+	-moz-opacity:1; 
+	filter:alpha(opacity=50);
+	border:1px;
+	border-radius: 200px;
+}
+.spic a:hover{
+	font-size:9px;
+}
+.spic a:hover img{
+	-moz-opacity:1; 
+	filter:alpha(opacity=100);
+	cursor:hand;
+}
+
+.wrap_1{
+	margin: 200px auto;
+	height: 600px;  
+    width:1900px;
+    max-height: 1900px;
+    border-top: 5px solid #D9EDF7;
+}
+table{
+	 
+    margin:50px 0; 
+	border: none;
+	padding:0;
+	height :400px;  
+    width:60%;  
+    float:left; 
+    overflow: hidden;
+	
+}
+
+
+
+.right_1,.right_2{
+	margin:50px 0;  
+    height :400px;  
+    width:38%;  
+    font-size: 2em;
+    float:right; 
+    overflow: hidden;
+}
+
+.box{
+    position: relative;
+    perspective: 1000px;
+}
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.50s ease-in-out 0s;
+}
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+    
+    
+}
+
+.box .box-img img{
+    width: 100%;
+    height: auto;
+    cursor:hand;
+}
+
+.box .box-text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right:0 ;
+    background: rgba(0,0,0,0.7);
+    transform: rotateY(90deg);
+    transition: all 0.50s ease-in-out 0s;
+    
+}
+.box:hover .box-text{
+	opacity: 1;
+	text-align: center;
+    transform: rotateY(0);
+   
+}
+
+h3{
+	font: 1.5em;
+	color: #fff;
+}
+.box .title{
+	text-align: center;
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+
+#view_img{
+	border:0;
+	
+	width:100%;
+	height:100%;
+	
+	
+	
+}
+table tr td{
+	text-align: center;
+	width:12.5%;
+	height:auto;
+}
+
+/*小标题*/
+.text{
+	color: #FCF8E3;
+	font-family:"微软雅黑";
+	font-family:10px;
+	width:50%;
+	height: 100px;
+	
+	}
+
+
+.spic a{
+	cursor:pointer
+	
+}
+.spic a img{
+	border:0;
+	width: 150px;
+	height: 150px;
+	background-size: 100% 100%;
+    animation:fz 20s;
+    -ms-animation:fz 20s;
+    animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+}
+.bgColor{
+	
+	opacity:1;
+	
+	text-align: center;
+	
+}
+
+audio{
+	position: absolute;
+	left:0;
+	top:0;
+}
+
+@keyframes fz{
+				from{
+					transform:rotate(0deg);
+				}
+				to{transform:rotate(360deg);
+				}
+			}
+
+@keyframes anim {
+   0% {transform: rotateY(-20deg) rotatex(10deg);}
+   50% {transform: rotateY(-10deg) rotatex(15deg);}
+   100% {transform: rotateY(-20deg) rotatex(10deg);}
+}
+
+@-webkit-keyframes anim {
+   0% {transform: rotateY(-20deg) rotatex(10deg);}
+   50% {transform: rotateY(-10deg) rotatex(15deg);}
+   100% {transform: rotateY(-20deg) rotatex(10deg);}
+}
+
+
+

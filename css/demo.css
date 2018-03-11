@@ -1,0 +1,56 @@
+
+/*
+	这是公用的demo
+*/
+
+body {
+	padding-bottom: 10%;
+	/*设置body距离页面底部的距离*/
+}
+
+.bottom {
+	position: fixed;
+	/*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+	left: 0px;
+	/*设置底部div距离页面左侧的距离*/
+	bottom: 0px;
+	/*设置底部div距离页面底部的距离*/
+	width: 100%;
+	/*设置底部div宽度占满整个页面的宽度*/
+	height: 10%;
+	/*设置位于底部的div的高度，与body距离页面底部的距离相同*/
+	background-color: black;
+	z-index: 999;
+	/*该属性设置一个定位元素沿 z 轴的位置，z 轴定义为垂直延伸到显示区的轴。
+	如果为正数，则离用户更近，数字越大，离用户越近，
+	也就是数字越大这个div块会堆叠在越上面；为负数则表示离用户更远。*/
+}
+
+nav ul{
+	float: left;/*元素向左浮动*/
+	margin:0px;
+	padding: 0 0 0 0;
+	width: 100%;
+	list-style: none;/*将列表的实心标记去掉*/
+}
+
+nav ul li{
+	display: inline;/*让元素排列成一行*/
+}
+
+nav ul li a{
+	float:left;
+	padding:20px 50px;/*距离左边和上边的大小,距离左边50px,距离上边20px*/
+	font-size: 70px;/*字体大小*/
+	text-align: center;
+	text-decoration: none;/*去掉超链接下面的下划线*/
+	background: balck center right no-repeat;/*center right定义了背景的位置，no-repeat表示图像平铺时不重复*/
+	color:white;
+	font-family: fantasy;
+	/*outline: none;不使用边框*/
+}
+
+/*鼠标经过时，标签编程灰色*/
+nav ul li a:hover{
+	color:gray;
+}

@@ -1,0 +1,67 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/background_main.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.photo {
+	position: absolute;
+	width:1000px;
+	height: 1000px;
+	margin-left: 600px;
+	margin-top: 300px;
+	transform-style: preserve-3d;
+	/*transform-origin: center;*/
+	animation: main 20s linear infinite;
+	perspective: 5000px;
+}
+
+img {
+	width: 750px;
+	height: 500px;
+	opacity: 0.8;
+	position: absolute;
+}
+
+img:nth-child(1) {
+	/*第n个子孩子*/
+	transform: rotateY(60deg) translateZ(800px);
+}
+
+img:nth-child(2) {
+	transform: rotateY(120deg) translateZ(800px);
+}
+
+img:nth-child(3) {
+	transform: rotateY(180deg) translateZ(800px);
+}
+
+img:nth-child(4) {
+	transform: rotateY(240deg) translateZ(800px);
+}
+
+img:nth-child(5) {
+	transform: rotateY(300deg) translateZ(800px);
+}
+
+img:nth-child(6) {
+	transform: rotatev(360deg) translateZ(800px);
+}
+
+@keyframes main {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}

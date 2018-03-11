@@ -1,0 +1,128 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/photo-1477132394330-d2376dc4c091.jpg) no-repeat;
+	background-size: cover;
+	overflow:hidden;
+	/*设置背景图片与body的大小自适应*/
+	}
+
+.picture{
+	width: 484px;
+	height: 550px;
+	overflow: hidden;
+	position: relative;
+	left: 1800px;
+	top: 70px;
+/*	opacity:0.9;*/
+}
+
+.picture img{
+	height: auto;
+	width: auto;
+	}
+	
+	
+	.picture .details {
+	width:484px;
+	height:550px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	text-align: center;
+	padding: 0 0px;
+	background: gray;
+	opacity: 0.8;
+	transform: rotate(90deg);
+	/*逆时针旋转90度*/
+	transform-origin: left top 0;
+	/*设置图片的位置*/
+	transition: all 0.3s ease 0s;
+	/*为所有的动画属性设置0.5秒ease效果的过渡动画*/
+}
+
+.picture .discription {
+	display: inline-block;
+	/*将对象的内容作为块呈递*/
+	font-size: 32px;
+	color: white;
+	margin: 0 0 0 0;
+	position: relative;
+	transform: rotate(-180deg);
+	transform-origin: left top 0;
+	transition: all 1s ease-in-out 0.2s;
+	/*direction:inherit;*/
+}
+
+
+/*设置鼠标滑过图片时，将上面所有的元素旋转角度变为0度，
+ * 由于各个元素上都设置了过渡延迟时间，所以各个元素会逐一的旋转到0度的位置*/
+
+.picture:hover .details,
+.picture:hover .discription{
+	transform: rotate(0deg);
+}
+
+.demo{
+    padding:10em 0;
+}
+.box{
+    position: relative;
+    perspective: 10000px;
+}
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.50s ease-in-out 0s;
+	position: relative;
+	width:390px;
+	overflow: hidden;/*如果内容超出了这个块，则隐藏*/
+	opacity: 0.7;
+}
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+}
+.box .box-img img{
+    width: 100%;
+    height: auto;
+}
+.box .box-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    transform: rotateY(90deg);
+    transition: all 0.50s ease-in-out 0s;
+}
+.box:hover .box-content{
+    transform: rotateY(0);
+}
+.box .title{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.box .description{
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+}
+.box .title:after,
+.box .description:after{
+    content: "";
+    width: 80%;
+    display: block;
+    border-bottom: 1px solid #fff;
+    margin: 15px auto;
+}
+
+@media only screen and (max-width: 990px) {
+    .box{  margin-bottom:20px; }
+}
+@media only screen and (max-width: 479px) {
+    .box .box-content{ padding: 20px; }
+}
